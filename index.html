@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lifestyle Homes & Services Ltd | Bonnyville</title>
-  <meta name="description" content="Framing, Foundations, Siding, Pole Barns, Custom Saunas & Sunrooms in Bonnyville and the Lakeland area"/>
+  <meta name="description" content="Framing, Foundations, Siding, Pole Barns, Custom Saunas & Sunrooms in Bonnyville, NE Saskatchewan, and the Lakeland area"/>
 
   <style>
     * {
@@ -86,7 +86,7 @@
     /* Hero */
     #hero {
       background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-                  url('https://images.unsplash.com/photo-1503387762-592deb58caa5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+                  url('hero-collage.jpg'); /* Replace with your uploaded collage image */
       background-size: cover;
       background-position: center;
       color: white;
@@ -175,6 +175,25 @@
       margin-bottom: 1rem;
     }
 
+    /* Projects Gallery */
+    #projects .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .project-item img:hover {
+      transform: scale(1.05);
+    }
+
     /* Contact */
     #contact {
       background: var(--dark-blue);
@@ -190,6 +209,22 @@
 
     #contact .btn:hover {
       background: #f0f0f0;
+    }
+
+    /* Social Links */
+    .social-links {
+      margin: 2rem 0;
+    }
+
+    .social-links a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    .social-links a:hover {
+      color: var(--orange);
     }
 
     /* Footer */
@@ -223,6 +258,7 @@
     <nav>
       <ul>
         <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -231,7 +267,7 @@
 
 <section id="hero">
   <h1>Built Right. Built to Last.</h1>
-  <p>Quality framing, foundations, siding, pole barns, custom saunas & sunrooms in Bonnyville and the Lakeland area.</p>
+  <p>Quality framing, foundations, siding, pole barns, custom saunas & sunrooms in Bonnyville, NE Saskatchewan, and the Lakeland area.</p>
   <a href="#contact" class="btn">Get Your Free Quote</a>
 </section>
 
@@ -277,10 +313,30 @@
   </div>
 </section>
 
+<section id="projects">
+  <h2>Our Projects</h2>
+  <div class="projects-grid">
+    <!-- Add your project images here. Upload new photos to GitHub (e.g., in an 'images/' folder) and add more <div class="project-item"> blocks like below. -->
+    <div class="project-item">
+      <img src="images/project1.jpg" alt="Project 1 - Framing Example">
+      <p>Recent Framing Project in Bonnyville</p>
+    </div>
+    <div class="project-item">
+      <img src="images/project2.jpg" alt="Project 2 - Custom Sauna">
+      <p>Custom Sauna Installation</p>
+    </div>
+    <!-- Example: Add more like this -->
+    <!-- <div class="project-item">
+      <img src="images/new-project.jpg" alt="New Project">
+      <p>Description of new project</p>
+    </div> -->
+  </div>
+</section>
+
 <section id="contact">
   <h2>Get In Touch Today</h2>
   <p style="font-size: 1.4rem; max-width: 700px; margin: 0 auto 2.5rem;">
-    Serving Bonnyville, Cold Lake, St. Paul & the Lakeland area<br>
+    Serving Bonnyville, Cold Lake, St. Paul, NE Saskatchewan & the Lakeland area<br>
     Free estimates • Clear communication • Clean worksites
   </p>
 
@@ -293,6 +349,10 @@
   <a href="mailto:jeff@lifestylehs.ca" class="btn" style="margin: 0 1rem 1.5rem;">
     Email Us
   </a>
+
+  <div class="social-links">
+    <a href="https://www.facebook.com/" target="_blank">Follow us on Facebook</a> <!-- Update this link when you have your page -->
+  </div>
 
   <p style="margin-top: 2rem; font-size: 1.1rem;">
     Or fill out the quick form below and we'll get back to you within 24 hours.
