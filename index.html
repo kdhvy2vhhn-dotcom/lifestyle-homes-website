@@ -20,15 +20,11 @@
       background-color: #f9f9f9;
     }
 
-    /* Colors */
     :root {
       --orange: #e65c00;
       --dark-blue: #003366;
-      --light-gray: #f5f5f5;
-      --medium-gray: #e0e0e0;
     }
 
-    /* Header / Navbar */
     header {
       position: fixed;
       top: 0;
@@ -59,34 +55,27 @@
       width: auto;
     }
 
-    .logo-text {
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: var(--dark-blue);
-      letter-spacing: -0.5px;
-    }
-
     nav ul {
       display: flex;
       list-style: none;
       gap: 2rem;
+      margin: 0;
+      padding: 0;
     }
 
     nav a {
       color: var(--dark-blue);
       text-decoration: none;
       font-weight: 600;
-      transition: color 0.25s;
     }
 
     nav a:hover {
       color: var(--orange);
     }
 
-    /* Hero */
     #hero {
       background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-                  url('hero-collage.jpg'); /* Replace with your uploaded collage image */
+                  url('hero-collage.jpg');
       background-size: cover;
       background-position: center;
       color: white;
@@ -98,8 +87,6 @@
     #hero h1 {
       font-size: 3.6rem;
       margin-bottom: 1rem;
-      font-weight: 800;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     }
 
     #hero p {
@@ -112,19 +99,12 @@
       display: inline-block;
       background: var(--orange);
       color: white;
-      padding: 1rem 2.2rem;
+      padding: 1rem 2rem;
       text-decoration: none;
       font-weight: bold;
       border-radius: 6px;
-      font-size: 1.2rem;
-      transition: background 0.3s;
     }
 
-    .btn:hover {
-      background: #c94e00;
-    }
-
-    /* Sections */
     section {
       max-width: 1200px;
       margin: 5rem auto;
@@ -134,67 +114,29 @@
     h2 {
       color: var(--dark-blue);
       text-align: center;
-      font-size: 2.6rem;
       margin-bottom: 2.5rem;
-      position: relative;
     }
 
-    h2:after {
-      content: '';
-      width: 80px;
-      height: 4px;
-      background: var(--orange);
-      position: absolute;
-      bottom: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    /* Services grid */
-    .services-grid {
+    .services-grid, .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2rem;
     }
 
-    .service-card {
+    .service-card, .project-item {
       background: white;
       padding: 2rem;
       border-radius: 10px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-    }
-
-    .service-card h3 {
-      color: var(--dark-blue);
-      margin-bottom: 1rem;
-    }
-
-    /* Projects Gallery */
-    #projects .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
     }
 
     .project-item img {
       width: 100%;
       height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      transition: transform 0.3s;
+      border-radius: 8px;
+      margin-bottom: 1rem;
     }
 
-    .project-item img:hover {
-      transform: scale(1.05);
-    }
-
-    /* Contact */
     #contact {
       background: var(--dark-blue);
       color: white;
@@ -202,46 +144,11 @@
       padding: 6rem 2rem;
     }
 
-    #contact .btn {
-      background: white;
-      color: var(--dark-blue);
-    }
-
-    #contact .btn:hover {
-      background: #f0f0f0;
-    }
-
-    /* Social Links */
-    .social-links {
-      margin: 2rem 0;
-    }
-
-    .social-links a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-size: 1.2rem;
-    }
-
-    .social-links a:hover {
-      color: var(--orange);
-    }
-
-    /* Footer */
     footer {
       background: #1a1a1a;
       color: #aaa;
       text-align: center;
       padding: 3rem 1rem;
-      font-size: 0.95rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      #hero h1 { font-size: 2.8rem; }
-      #hero p   { font-size: 1.3rem; }
-      .navbar   { flex-direction: column; gap: 1rem; }
-      nav ul    { flex-direction: column; gap: 1rem; text-align: center; }
     }
   </style>
 </head>
@@ -250,9 +157,7 @@
 <header>
   <div class="navbar">
     <div class="logo-container">
-      <!-- Replace this src with your actual logo file after upload -->
       <img src="logo.png" alt="Lifestyle Homes & Services Ltd" class="logo-img">
-      <span class="logo-text">Lifestyle Homes & Services Ltd</span>
     </div>
 
     <nav>
@@ -274,62 +179,49 @@
 <section id="services">
   <h2>Our Services</h2>
   <div class="services-grid">
-
     <div class="service-card">
       <h3>Residential & Commercial Framing</h3>
-      <p>New construction • Additions • Structural repairs • Timber framing</p>
+      <p>New construction • Additions • Structural repairs</p>
     </div>
-
     <div class="service-card">
       <h3>Foundations</h3>
-      <p>Formwork • Rebar • Concrete coordination • Site preparation</p>
+      <p>Formwork • Rebar • Site preparation</p>
     </div>
-
     <div class="service-card">
       <h3>Siding</h3>
-      <p>Vinyl • Fiber cement • Metal • Trim & flashings • Repairs</p>
+      <p>Vinyl • Fiber cement • Repairs</p>
     </div>
-
     <div class="service-card">
       <h3>Shops & Pole Barns</h3>
-      <p>New builds • Additions • Custom storage solutions • Agricultural buildings</p>
+      <p>New builds • Custom storage</p>
     </div>
-
     <div class="service-card">
       <h3>Custom Saunas</h3>
-      <p>Traditional & infrared • Design to finish • Proper moisture & ventilation</p>
+      <p>Design to finish • Proper ventilation</p>
     </div>
-
     <div class="service-card">
       <h3>Custom Sunrooms</h3>
-      <p>Four-season rooms • Insulated • Quality carpentry • Window integration</p>
+      <p>Four-season • Insulated • Quality carpentry</p>
     </div>
-
     <div class="service-card">
       <h3>General Contracting</h3>
-      <p>Project management • Trade coordination • Timely completion • Quality control</p>
+      <p>Project management • Trade coordination • Quality control</p>
     </div>
-
   </div>
 </section>
 
 <section id="projects">
   <h2>Our Projects</h2>
   <div class="projects-grid">
-    <!-- Add your project images here. Upload new photos to GitHub (e.g., in an 'images/' folder) and add more <div class="project-item"> blocks like below. -->
+
+    <!-- Your photo - first in the gallery -->
     <div class="project-item">
-      <img src="images/project1.jpg" alt="Project 1 - Framing Example">
-      <p>Recent Framing Project in Bonnyville</p>
+      <img src="images/IMG_7555.jpg" alt="Home Framing Project Bonnyville">
+      <p>New Residential Framing - Bonnyville, Completed December 2025</p>
     </div>
-    <div class="project-item">
-      <img src="images/project2.jpg" alt="Project 2 - Custom Sauna">
-      <p>Custom Sauna Installation</p>
-    </div>
-    <!-- Example: Add more like this -->
-    <!-- <div class="project-item">
-      <img src="images/new-project.jpg" alt="New Project">
-      <p>Description of new project</p>
-    </div> -->
+
+    <!-- Add more projects here later by copying the block above -->
+
   </div>
 </section>
 
@@ -350,26 +242,21 @@
     Email Us
   </a>
 
-  <div class="social-links">
-    <a href="https://www.facebook.com/" target="_blank">Follow us on Facebook</a> <!-- Update this link when you have your page -->
-  </div>
-
-  <p style="margin-top: 2rem; font-size: 1.1rem;">
+  <p style="margin-top: 2rem;">
     Or fill out the quick form below and we'll get back to you within 24 hours.
   </p>
 
-  <!-- You can replace this with Formspree / Getform / etc. -->
-  <form action="https://formspree.io/f/your-form-id-here" method="POST" style="max-width: 580px; margin: 2.5rem auto; display: grid; gap: 1.2rem;">
-    <input type="text" name="name" placeholder="Your Name" required style="padding: 1rem; border-radius: 6px; border: none;">
-    <input type="tel" name="phone" placeholder="Phone Number" required style="padding: 1rem; border-radius: 6px; border: none;">
-    <textarea name="message" rows="5" placeholder="Tell us about your project..." required style="padding: 1rem; border-radius: 6px; border: none;"></textarea>
-    <button type="submit" class="btn" style="background:white; color:var(--dark-blue); font-weight:bold;">Send Message</button>
+  <!-- Contact form placeholder -->
+  <form action="https://formspree.io/f/your-form-id" method="POST" style="max-width: 580px; margin: 2rem auto; display: grid; gap: 1rem;">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+    <button type="submit" class="btn">Send Message</button>
   </form>
 </section>
 
 <footer>
-  <p>© 2026 Lifestyle Homes & Services Ltd • Bonnyville, Alberta<br>
-  Residential & Commercial • Licensed & Insured</p>
+  <p>© 2026 Lifestyle Homes & Services Ltd • Bonnyville, Alberta</p>
 </footer>
 
 </body>
